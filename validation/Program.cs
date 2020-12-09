@@ -26,19 +26,36 @@ namespace ValidationGCSE
             // RANGE
             //2) User should enter an number greater than 5 and less than 10, continue to prompt the user
             // until they enter a valid number
-            Console.WriteLine("Enter a number greater than 5 and less than 10");
 
+           
+            int usernum;
+            do
+            {
+                Console.WriteLine("Enter a number greater than 5 and less than 10");
+                usernum = Convert.ToInt32(Console.ReadLine());
+            } while (usernum <= 5 || usernum >= 10);
 
 
             //3) User should enter a even number, continue to prompt the uer until they enter an even number
             //  Modulus coulf be useful here
-
+            
+            int usernum2;
+            do
+            {
+                Console.WriteLine("Enter an even number");
+                usernum2 = Convert.ToInt32(Console.ReadLine());
+            } while (usernum2 % 2 > 0);
 
 
             //FORMAT
             //4 User should enter a string that contains a @ and a .(full stop) continue to prompt the
             // user until they enter a valid string.
-
+            string userstring;
+            do
+            {
+                Console.WriteLine("Write something that contains an @ and a .");
+                userstring = Console.ReadLine();
+            } while (userstring.IndexOf('@') <= 0 && userstring.IndexOf('.') <= 0);
 
 
 
@@ -46,7 +63,12 @@ namespace ValidationGCSE
             // User should enter their password twice, the password should be verified.
             // if user does not enter the same password twice they should continue to be
             //prompted for their password
-
+            string password2;
+            do
+            {
+                Console.WriteLine("Type password again");
+                password2 = Console.ReadLine();
+            } while (password /= password2);
 
             // EXTENSION Validation - TYPE
             // User should enter a double(as a string. The program should continue to
